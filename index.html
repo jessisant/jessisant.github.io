@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jessi te ayuda</title>
+<meta name="description" content="Campañas abiertas para creadoras de contenido y recomendaciones de productos de @jessisant_.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CDJED80XWL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CDJED80XWL');
+</script>
+<style>
+:root{--bg:#F6EEF2;--paper:#FFFFFF;--ink:#2E2433;--soft:#7A6A80;--mauve:#B5838D;--leaf:#6B8F71;--line:#E6D6DF;--chip:#EFE2EA;--warm:#C59A6D;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1F1A22;--paper:#2A232E;--ink:#F3E9EF;--soft:#B9A9BF;--mauve:#D9A3AD;--leaf:#9CC0A1;--line:#3C3341;--chip:#352C3A}}
+:root[data-theme="dark"]{--bg:#1F1A22;--paper:#2A232E;--ink:#F3E9EF;--soft:#B9A9BF;--mauve:#D9A3AD;--leaf:#9CC0A1;--line:#3C3341;--chip:#352C3A}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Gowun Dodum",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+.wrap{max-width:30rem;margin:0 auto;padding:2.5rem 1.25rem 3rem;position:relative}
+.avatar{width:5.5rem;height:5.5rem;border-radius:50%;background:var(--chip);display:grid;place-items:center;font-size:2.4rem;border:2px solid var(--mauve);overflow:hidden;padding:0;color:inherit;font-family:inherit}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.admin #avatar{cursor:pointer}
+.photo-row{display:flex;gap:.75rem;align-items:center;margin-bottom:.75rem}
+.photo-row .avatar{width:4rem;height:4rem;font-size:1.8rem;flex:none}
+.photo-row div{display:flex;gap:.5rem;flex-wrap:wrap}
+h1{font-family:"Gowun Batang",Georgia,serif;font-weight:700;font-size:2rem;line-height:1.15;margin:1rem 0 .5rem;max-width:14ch;position:relative}
+.tags{margin:0 0 .35rem;font-size:1.05rem}
+.contact{margin:0 0 1rem;font-size:.9rem;display:flex;flex-wrap:wrap;gap:.25rem .9rem}
+.contact a{color:var(--ink);text-decoration-color:var(--mauve);text-underline-offset:3px}
+.code{display:flex;align-items:center;justify-content:space-between;gap:.75rem;background:var(--paper);border:1.5px dashed var(--mauve);border-radius:.9rem;padding:.6rem .6rem .6rem 1rem;margin:0 0 1rem}
+.code[hidden]{display:none}
+.code-l{font-size:.95rem}
+.code strong{letter-spacing:.04em}
+.code button{font:inherit;font-size:.9rem;border:none;background:var(--mauve);color:#fff;padding:.45rem 1rem;border-radius:999px;cursor:pointer;flex:none}
+.intro{color:var(--soft);margin:0 0 1.75rem;max-width:34ch}
+.main-links{display:grid;gap:.6rem;margin-bottom:2.25rem}
+.main-links a{display:block;padding:.95rem 1.1rem;border-radius:999px;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);text-align:center}
+.main-links a:first-child{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.main-links a:hover{border-color:var(--mauve)}
+h2{font-family:"Gowun Batang",Georgia,serif;font-size:1.35rem;margin:0 0 .75rem}
+.filters{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.25rem;margin-bottom:1rem}
+.filters button{font:inherit;font-size:.9rem;border:1px solid var(--line);background:transparent;color:var(--ink);padding:.4rem .9rem;border-radius:999px;cursor:pointer;white-space:nowrap}
+.filters button[aria-pressed="true"]{background:var(--mauve);border-color:var(--mauve);color:#fff}
+.filters .fnew{border-color:var(--mauve);color:var(--mauve);font-weight:700}
+.filters .fnew[aria-pressed="true"]{color:#fff}
+.list{display:grid;gap:.75rem}
+.camp{background:var(--paper);border-radius:1.1rem;padding:1rem 1.1rem;border-left:4px solid var(--mauve)}
+.camp.haircare{border-left-color:var(--leaf)}
+.camp.maquillaje{border-left-color:var(--warm)}
+.camp h3{margin:0;font-size:1.05rem}
+.camp p{margin:.25rem 0 .75rem;color:var(--soft);font-size:.95rem}
+.row{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap}
+.due{font-size:.85rem;color:var(--soft)}
+.due.soon{color:var(--mauve);font-weight:700}
+.acts{display:flex;flex-direction:column;align-items:stretch;gap:.4rem}
+.copylink{font:inherit;font-size:.85rem;border:1px solid var(--line);background:transparent;color:var(--ink);padding:.4rem 1rem;border-radius:999px;cursor:pointer}
+.copylink:hover{border-color:var(--mauve)}
+.nuevo{display:inline-block;margin-top:.7rem;background:var(--mauve);color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.02em;padding:.2rem .7rem;border-radius:999px}
+.sinf{display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--ink);margin:-.4rem 0 .75rem;cursor:pointer}
+.sinf input{display:inline;width:auto;margin:0;accent-color:var(--mauve)}
+.linkbox{margin-top:.6rem;font-size:.85rem}
+.linkbox[hidden]{display:none}
+.go{text-align:center;font-size:.9rem;text-decoration:none;color:var(--paper);background:var(--ink);padding:.45rem 1rem;border-radius:999px}
+.closed .camp{opacity:.6;border-left-color:var(--line)}
+.closed .go,.closed .copylink{display:none}
+.closed .camp{background:transparent;border:1px dashed var(--line);border-left:4px solid var(--line)}
+.closed-sec{margin-top:2.5rem;padding:1rem;border-radius:1.1rem;background:var(--chip)}
+.closed-sec[hidden]{display:none}
+.only{font-family:"Gowun Dodum",system-ui,sans-serif;font-size:.75rem;font-weight:400;vertical-align:middle;background:var(--mauve);color:#fff;padding:.15rem .55rem;border-radius:999px;margin-left:.35rem}
+.hint2{font-size:.85rem;color:var(--soft);margin:-.4rem 0 .9rem}
+.tools .react{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.tools{display:none;gap:.5rem;margin-top:.6rem;padding-top:.6rem;border-top:1px dashed var(--line)}
+.admin .tools{display:flex}
+.tools button,.bar button,dialog button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:.35rem .8rem;border-radius:999px;cursor:pointer}
+.reco-sec{margin-top:2.5rem}
+.pthumb{width:4.5rem;height:4.5rem;border-radius:.8rem;background:var(--chip);overflow:hidden;display:grid;place-items:center;font-size:1.8rem;flex:none}
+.pthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.rwrap{display:flex;gap:.85rem;align-items:flex-start}
+.rwrap>div{flex:1;min-width:0}
+.rgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.rgrid .empty{grid-column:1/-1}
+.rcol{display:flex;flex-direction:column;gap:.75rem;min-width:0}
+.reco{display:block;width:100%;margin:0;background:var(--paper);border-radius:1.1rem;overflow:hidden;border-bottom:4px solid var(--mauve)}
+.reco.haircare{border-bottom-color:var(--leaf)}
+.reco.maquillaje{border-bottom-color:var(--warm)}
+.reco.otros{border-bottom-color:var(--soft)}
+.reco img{display:block;width:100%;height:auto;background:var(--chip)}
+.rbody{padding:.7rem .8rem .8rem}
+.reco h3{margin:0;font-size:.95rem;line-height:1.3}
+.reco p{margin:.25rem 0 0;color:var(--soft);font-size:.85rem}
+.reco .go{display:inline-block;margin-top:.6rem;font-size:.85rem}
+.reco .tools{margin-top:.6rem;flex-wrap:wrap}
+#recoPrev{height:auto;min-height:4.5rem;max-height:9rem}
+#recoPrev img{object-fit:contain;max-height:9rem}
+.more{margin:.25rem 0 .75rem}
+.dupwarn{margin:-.4rem 0 .75rem;padding:.55rem .75rem;border-radius:.6rem;background:#FCE8EC;color:#8A2E40;font-size:.85rem}
+.dupwarn[hidden]{display:none}
+.more summary{font-size:.9rem;margin-bottom:.75rem}
+.jumps{display:grid;gap:.6rem;margin:-1.5rem 0 2.25rem}
+.totop{position:fixed;right:1rem;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));width:3rem;height:3rem;border-radius:50%;border:none;background:var(--mauve);color:#fff;font-size:1.4rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(46,36,51,.25);opacity:0;pointer-events:none;transform:translateY(.5rem);transition:opacity .2s,transform .2s;z-index:5}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+.admin .totop{bottom:calc(9.5rem + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion:reduce){.totop{transition:none}}
+.jump{display:block;width:100%;font:inherit;font-size:1rem;margin:0;padding:.95rem 1.1rem;border-radius:999px;border:1.5px solid var(--mauve);background:transparent;color:var(--ink);cursor:pointer}
+.jump:hover{background:var(--chip)}
+.jump[hidden]{display:none}
+.camp.otros{border-left-color:var(--soft)}
+.tools .del{color:#B44A5A}
+details{margin-top:2rem}
+summary{cursor:pointer;color:var(--soft)}
+.empty{color:var(--soft);padding:1rem 0}
+footer{margin-top:2.5rem;text-align:center;font-size:.85rem;color:var(--soft)}
+footer a{color:var(--ink)}
+.bar{display:none;position:sticky;bottom:0;margin:2rem -1.25rem -3rem;padding:.8rem 1.25rem calc(.8rem + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:2px solid var(--mauve);gap:.5rem;flex-wrap:wrap;align-items:center}
+.admin .bar{display:flex}
+.bar span{font-size:.85rem;color:var(--soft);flex-basis:100%}
+.bar button.add{background:var(--mauve);border-color:var(--mauve);color:#fff}
+.status{font-size:.85rem;color:var(--mauve);flex-basis:100%}
+dialog{border:none;border-radius:1.2rem;padding:1.25rem;width:min(28rem,calc(100% - 2rem));background:var(--paper);color:var(--ink);max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(46,36,51,.45)}
+dialog h2{margin-bottom:1rem}
+label{display:block;font-size:.85rem;color:var(--soft);margin-bottom:.75rem}
+input,select,textarea{display:block;width:100%;margin-top:.25rem;font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.55rem .7rem}
+textarea{min-height:4rem;resize:vertical}
+fieldset{border:1px solid var(--line);border-radius:.8rem;padding:.75rem;margin:0 0 .75rem}
+.field{margin-bottom:.75rem}
+.fh{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:var(--soft)}
+.sw{display:flex;align-items:center;gap:.35rem;margin:0;cursor:pointer}
+.sw input{display:inline;width:auto;margin:0;accent-color:var(--mauve)}
+.field>input{margin-top:.25rem}
+.hint{font-size:.8rem;color:var(--soft);margin:-.4rem 0 .75rem}
+legend{font-size:.85rem;color:var(--soft);padding:0 .3rem}
+.actions{display:flex;justify-content:flex-end;gap:.5rem;margin-top:.5rem}
+.actions .save{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--mauve);outline-offset:2px}
+
+.loading{color:var(--soft);padding:1rem 0}
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <header>
+    <div class="avatar" id="avatar"></div>
+    <h1 id="titulo"></h1>
+    <p class="tags" id="etiquetas"></p>
+    <p class="contact" id="contacto"></p>
+    <div class="code" id="codeBox"><span class="code-l"><span id="codeLabel"></span>: <strong id="codeVal"></strong></span><button type="button" id="btnCopy">Copiar</button></div>
+    <p class="intro" id="intro"></p>
+  </header>
+  <nav class="main-links" id="botones"></nav>
+  <div class="jumps">
+    <button type="button" class="jump" id="btnJumpCamp">Ir a campañas abiertas</button>
+    <button type="button" class="jump" id="btnJump">Ir a recomendaciones de productos</button>
+  </div>
+  <section id="secCamp">
+    <h2>Campañas abiertas</h2>
+    <div class="filters" role="group" aria-label="Filtrar por categoría">
+      <button data-f="todas" aria-pressed="true">Todas</button>
+      <button data-f="nuevas" aria-pressed="false" class="fnew">¡Nuevas!</button>
+      <button data-f="skincare" aria-pressed="false">Skincare</button>
+      <button data-f="haircare" aria-pressed="false">Haircare</button>
+      <button data-f="maquillaje" aria-pressed="false">Maquillaje</button>
+    </div>
+    <div class="list" id="open"><p class="loading">Cargando campañas…</p></div>
+  </section>
+  <section id="secReco" class="reco-sec">
+    <h2>Recomendaciones de productos</h2>
+    <div class="filters rf" role="group" aria-label="Filtrar recomendaciones por categoría">
+      <button data-rf="todas" aria-pressed="true">Todas</button>
+      <button data-rf="skincare" aria-pressed="false">Skincare</button>
+      <button data-rf="haircare" aria-pressed="false">Haircare</button>
+      <button data-rf="maquillaje" aria-pressed="false">Maquillaje</button>
+      <button data-rf="otros" aria-pressed="false">Otros</button>
+    </div>
+    <div class="rgrid" id="recos"><p class="loading empty">Cargando recomendaciones…</p></div>
+  </section>
+  <footer id="pie"></footer>
+  <button type="button" class="totop" id="btnTop" aria-label="Volver arriba">↑</button>
+</div>
+
+<script>
+/* ===== CONFIGURACIÓN DE TU PÁGINA (puedes editar estos textos) ===== */
+const CONFIG = {
+  "gaId": "G-CDJED80XWL",
+  "campanasCSV": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzSJh6JGIqFgMG91B3JgyCTavIZA6v9jlj-L3owAoMctITj5nKtuBUm64D2Zfkz9avCm1ubfa3kRfk/pub?output=csv",
+  "recomendacionesCSV": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRuaNTmHD6yImYKz12cxUL57Ey9pEYZ865gaVN-TQ03L8oWQtGQsM0MabpJ_v_qUeB6IBiPOWN6-2V2/pub?output=csv",
+  "titulo": "Jessi te ayuda",
+  "etiquetas": "Beauty | Skincare💄🩵💌",
+  "usuario": "@jessisant_",
+  "correo": "jessisant.info@gmail.com",
+  "codigoTexto": "Código de YesStyle",
+  "codigo": "JESSISANT10",
+  "intro": "Colaboraciones abiertas para campañas de skincare, makeup, haircare entre otros. Revisa qué piden, la fecha límite y postula.",
+  "foto": "fotos/foto-perfil.jpg",
+  "botones": [
+    {
+      "texto": "Regístrate como Influencer de YesStyle",
+      "link": "https://www.yesstyle.com/es/influencers.html?rco=JESSISANT10&utm_term=JESSISANT10&utm_medium=Influencer&utm_source=dynamic&mcg=influencer"
+    }
+  ]
+};
+/* ================================================================== */
+
+(function(){
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+const safeUrl = u => /^https?:\/\//i.test(String(u||"").trim()) ? String(u).trim() : "#";
+const evento = (nombre, datos) => { try{ if(window.gtag) gtag("event", nombre, datos||{}); }catch(_){} };
+const quieto = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* --- Cabecera --- */
+document.title = CONFIG.titulo;
+$("titulo").textContent = CONFIG.titulo;
+$("etiquetas").textContent = CONFIG.etiquetas || "";
+$("intro").textContent = CONFIG.intro || "";
+const av = $("avatar");
+if(CONFIG.foto){ const im = new Image(); im.alt = "Foto de perfil"; im.src = CONFIG.foto; im.onerror = ()=>{ av.textContent="🌸"; }; av.appendChild(im); } else av.textContent = "🌸";
+const u = (CONFIG.usuario||"").trim().replace(/^@/,""), mail = (CONFIG.correo||"").trim();
+$("contacto").innerHTML = (u ? `<a href="https://www.tiktok.com/@${encodeURIComponent(u)}" target="_blank" rel="noopener">@${esc(u)}</a>` : "") +
+  (mail ? `<span>Correo: <a href="mailto:${esc(mail)}">${esc(mail)}</a></span>` : "");
+$("codeBox").hidden = !(CONFIG.codigo||"").trim();
+$("codeLabel").textContent = CONFIG.codigoTexto || "Código";
+$("codeVal").textContent = CONFIG.codigo || "";
+$("botones").innerHTML = (CONFIG.botones||[]).filter(b=>b.texto).map(b=>`<a href="${esc(safeUrl(b.link))}" target="_blank" rel="noopener" data-boton="${esc(b.texto)}">${esc(b.texto)}</a>`).join("");
+$("pie").innerHTML = u ? `Diseñado por <a href="https://www.tiktok.com/@${encodeURIComponent(u)}" target="_blank" rel="noopener">@${esc(u)}</a>` : "";
+
+/* --- Lector de CSV (Google Sheets) --- */
+function parseCSV(t){
+  const rows=[]; let row=[], f="", q=false;
+  for(let i=0;i<t.length;i++){
+    const c=t[i];
+    if(q){ if(c==='"'){ if(t[i+1]==='"'){ f+='"'; i++; } else q=false; } else f+=c; }
+    else if(c==='"') q=true;
+    else if(c===','){ row.push(f); f=""; }
+    else if(c==='\n'){ row.push(f); rows.push(row); row=[]; f=""; }
+    else if(c!=='\r') f+=c;
+  }
+  if(f!==""||row.length){ row.push(f); rows.push(row); }
+  if(!rows.length) return [];
+  const norm = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+  const h = rows[0].map(norm);
+  return rows.slice(1).filter(r=>r.some(x=>x.trim())).map(r=>{ const o={}; h.forEach((k,i)=>o[k]=(r[i]||"").trim()); return o; });
+}
+function aFecha(s){
+  s=String(s||"").trim(); if(!s) return null; let m;
+  if(m=s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/)) return new Date(+m[1],m[2]-1,+m[3]);
+  if(m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/)) return new Date(+m[3],m[2]-1,+m[1]);
+  return null;
+}
+async function cargar(url){
+  if(!/^https:\/\/docs\.google\.com\//.test(url||"")) throw new Error("sin-link");
+  const r = await fetch(url + (url.includes("?")?"&":"?") + "t=" + Date.now(), {cache:"no-store"});
+  if(!r.ok) throw new Error("http");
+  return parseCSV(await r.text());
+}
+
+/* --- Campañas --- */
+const hoy = new Date(); hoy.setHours(0,0,0,0);
+let CAMP = [], filtro = "todas";
+const CATS = ["skincare","haircare","maquillaje","otros"];
+const cat = s => { const c=String(s||"").toLowerCase().trim(); return CATS.includes(c)?c:"skincare"; };
+const dias = c => c.sinFecha || !c.cierre ? Infinity : Math.round((c.cierre - hoy)/86400000);
+const fmt = d => d.toLocaleDateString("es-PE",{day:"numeric",month:"short"});
+const esNueva = c => c.agregada && c.agregada.getTime() === hoy.getTime();
+
+function card(c, i){
+  const d = dias(c);
+  const due = d===Infinity ? "Sin fecha límite, solo espera el correo de la marca :)" : d===0 ? "Cierra hoy" : d===1 ? "Cierra mañana" : `Cierra en ${d} días (${fmt(c.cierre)})`;
+  const tit = [c.marca, c.producto].filter(Boolean).map(esc).join(" · ");
+  return `<article class="camp ${c.categoria}">
+    ${tit ? `<h3>${tit}</h3>` : ""}${c.pide ? `<p>${esc(c.pide)}</p>` : ""}
+    <div class="row"><span class="due ${d>=0&&d<=3?"soon":""}">${due}</span>
+    <div class="acts"><a class="go" href="${esc(safeUrl(c.link))}" target="_blank" rel="noopener" data-postular="${i}">Postular</a>
+    <button type="button" class="copylink" data-copylink="${i}">Copiar link</button></div></div>
+    ${esNueva(c) ? `<span class="nuevo">¡Nuevo!</span>` : ""}
+    <input class="linkbox" id="lb${i}" readonly hidden value="${esc(safeUrl(c.link))}" aria-label="Link para postular">
+  </article>`;
+}
+function renderCamp(){
+  const ab = CAMP.map((c,i)=>[c,i]).filter(([c])=>dias(c)>=0 && (filtro==="todas" || (filtro==="nuevas" ? esNueva(c) : c.categoria===filtro))).sort((a,b)=>dias(a[0])-dias(b[0]));
+  $("open").innerHTML = ab.length ? ab.map(([c,i])=>card(c,i)).join("") :
+    `<p class="empty">${filtro==="nuevas" ? "Todavía no hay campañas nuevas de hoy. Revisa más tarde, siempre se suman nuevas." : "No hay campañas abiertas en esta categoría por ahora. Vuelve pronto, siempre se suman nuevas."}</p>`;
+}
+
+/* --- Recomendaciones --- */
+let RECO = [], rfiltro = "todas";
+function recoCard(r, i){
+  const tit = [r.marca, r.producto].filter(Boolean).map(esc).join(" · ");
+  const foto = r.foto ? (/^https?:\/\//i.test(r.foto) ? r.foto : "fotos/" + r.foto.replace(/^fotos\//,"")) : "";
+  return `<article class="reco ${r.categoria}">${foto ? `<img src="${esc(foto)}" alt="${esc(r.producto)}" loading="lazy" onerror="this.remove()">` : ""}<div class="rbody">
+    ${tit ? `<h3>${tit}</h3>` : ""}${r.nota ? `<p>${esc(r.nota)}</p>` : ""}
+    <a class="go" href="${esc(safeUrl(r.link))}" target="_blank" rel="noopener" data-verproducto="${i}">Ver producto</a>
+  </div></article>`;
+}
+function renderRecos(){
+  const vis = RECO.map((r,i)=>[r,i]).filter(([r])=>rfiltro==="todas"||r.categoria===rfiltro);
+  $("secReco").hidden = !RECO.length; $("btnJump").hidden = !RECO.length;
+  $("recos").innerHTML = vis.length ? [0,1].map(col=>`<div class="rcol">${vis.filter((_,k)=>k%2===col).map(([r,i])=>recoCard(r,i)).join("")}</div>`).join("") :
+    `<p class="empty">No hay recomendaciones en esta categoría por ahora.</p>`;
+}
+
+/* --- Carga de datos --- */
+cargar(CONFIG.campanasCSV).then(rows=>{
+  CAMP = rows.map(r=>({
+    marca:r["marca"], producto:r["producto"], pide:r["que piden"], categoria:cat(r["categoria"]),
+    cierre:aFecha(r["fecha limite"]), sinFecha:/^s[ií]/i.test(r["sin fecha limite"]||""),
+    agregada:aFecha(r["fecha agregada"]), link:r["link"]
+  })).filter(c=>c.link || c.marca);
+  renderCamp();
+}).catch(()=>{ $("open").innerHTML = `<p class="empty">No se pudieron cargar las campañas en este momento. Vuelve a intentar en unos minutos.</p>`; });
+
+cargar(CONFIG.recomendacionesCSV).then(rows=>{
+  RECO = rows.map(r=>({ producto:r["producto"], marca:r["marca"], nota:r["por que lo recomiendas"], categoria:cat(r["categoria"]), link:r["link"], foto:r["foto"] })).filter(r=>r.link || r.producto);
+  renderRecos();
+}).catch(()=>{ RECO=[]; renderRecos(); });
+
+/* --- Filtros --- */
+document.querySelectorAll("[data-f]").forEach(b=>b.addEventListener("click",()=>{
+  filtro=b.dataset.f; document.querySelectorAll("[data-f]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  renderCamp(); evento("filtro_campanas",{filtro});
+}));
+document.querySelectorAll("[data-rf]").forEach(b=>b.addEventListener("click",()=>{
+  rfiltro=b.dataset.rf; document.querySelectorAll("[data-rf]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  renderRecos(); evento("filtro_recomendaciones",{filtro:rfiltro});
+}));
+
+/* --- Copiar --- */
+async function copiarTexto(txt){
+  try{ await navigator.clipboard.writeText(txt); return true; }catch(_){}
+  const t=document.createElement("textarea"); t.value=txt; t.setAttribute("readonly",""); t.style.position="fixed"; t.style.opacity="0";
+  document.body.appendChild(t); t.select(); let ok=false; try{ ok=document.execCommand("copy"); }catch(_){} t.remove(); return ok;
+}
+$("btnCopy").addEventListener("click", async ()=>{
+  const b=$("btnCopy"), ok=await copiarTexto(CONFIG.codigo||"");
+  if(!ok){ const r=document.createRange(); r.selectNodeContents($("codeVal")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+  b.textContent = ok ? "¡Copiado!" : "Mantén presionado para copiar";
+  clearTimeout(b._t); b._t=setTimeout(()=>{ b.textContent="Copiar"; },2000);
+  evento("copiar_codigo",{codigo:CONFIG.codigo});
+});
+
+/* --- Clics (métricas) y copiar link --- */
+document.addEventListener("click", async e=>{
+  const p=e.target.closest("[data-postular]");
+  if(p){ const c=CAMP[+p.dataset.postular]; evento("postular",{campana:c ? (c.marca||c.producto||"sin nombre") : ""}); }
+  const v=e.target.closest("[data-verproducto]");
+  if(v){ const r=RECO[+v.dataset.verproducto]; evento("ver_producto",{producto:r ? r.producto : ""}); }
+  const bt=e.target.closest("[data-boton]");
+  if(bt) evento("clic_boton",{boton:bt.dataset.boton});
+  const cl=e.target.closest("[data-copylink]");
+  if(cl){
+    const i=+cl.dataset.copylink, c=CAMP[i], ok=await copiarTexto(safeUrl(c && c.link));
+    if(ok) cl.textContent="¡Link copiado!";
+    else { const box=$("lb"+i); if(box){ box.hidden=false; box.focus(); box.select(); } cl.textContent="Mantén presionado el link para copiar"; }
+    clearTimeout(cl._t); cl._t=setTimeout(()=>{ cl.textContent="Copiar link"; },2500);
+    evento("copiar_link",{campana:c ? (c.marca||"") : ""});
+  }
+});
+
+/* --- Navegación --- */
+const irA = el => el.scrollIntoView({behavior: quieto() ? "auto" : "smooth", block:"start"});
+$("btnJumpCamp").addEventListener("click",()=>irA($("secCamp")));
+$("btnJump").addEventListener("click",()=>irA($("secReco")));
+$("btnTop").addEventListener("click",()=>window.scrollTo({top:0, behavior: quieto() ? "auto" : "smooth"}));
+const mostrarTop = ()=>$("btnTop").classList.toggle("show", window.scrollY > 400);
+window.addEventListener("scroll", mostrarTop, {passive:true}); mostrarTop();
+})();
+</script>
+</body>
+</html>
