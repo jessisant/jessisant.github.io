@@ -223,7 +223,10 @@ $("titulo").textContent = CONFIG.titulo;
 $("etiquetas").textContent = CONFIG.etiquetas || "";
 $("intro").textContent = CONFIG.intro || "";
 const av = $("avatar");
-if(CONFIG.foto){ const im = new Image(); im.alt = "Foto de perfil"; im.src = CONFIG.foto; im.onerror = ()=>{ av.textContent="🌸"; }; av.appendChild(im); } else av.textContent = "🌸";
+if(CONFIG.foto){ const im = new Image(); im.alt = "Foto de perfil";
+  im.onerror = ()=>{ const alt = im.src.includes("/fotos/") ? CONFIG.foto.replace(/^fotos\//,"") : null;
+    if(alt && !im.dataset.retry){ im.dataset.retry="1"; im.src = alt; } else { im.remove(); av.textContent="🌸"; } };
+  im.src = CONFIG.foto; av.appendChild(im); } else av.textContent = "🌸";
 const u = (CONFIG.usuario||"").trim().replace(/^@/,""), mail = (CONFIG.correo||"").trim();
 $("contacto").innerHTML = (u ? `<a href="https://www.tiktok.com/@${encodeURIComponent(u)}" target="_blank" rel="noopener">@${esc(u)}</a>` : "") +
   (mail ? `<span>Correo: <a href="mailto:${esc(mail)}">${esc(mail)}</a></span>` : "");
@@ -296,7 +299,7 @@ let RECO = [], rfiltro = "todas";
 function recoCard(r, i){
   const tit = [r.marca, r.producto].filter(Boolean).map(esc).join(" · ");
   const foto = r.foto ? (/^https?:\/\//i.test(r.foto) ? r.foto : "fotos/" + r.foto.replace(/^fotos\//,"")) : "";
-  return `<article class="reco ${r.categoria}">${foto ? `<img src="${esc(foto)}" alt="${esc(r.producto)}" loading="lazy" onerror="this.remove()">` : ""}<div class="rbody">
+  return `<article class="reco ${r.categoria}">${foto ? `<img src="${esc(foto)}" alt="${esc(r.producto)}" loading="lazy" onerror="if(!this.dataset.retry&&this.src.indexOf('/fotos/')>-1){this.dataset.retry=1;this.src=this.src.split('/fotos/').pop();}else{this.remove();}">` : ""}<div class="rbody">
     ${tit ? `<h3>${tit}</h3>` : ""}${r.nota ? `<p>${esc(r.nota)}</p>` : ""}
     <a class="go" href="${esc(safeUrl(r.link))}" target="_blank" rel="noopener" data-verproducto="${i}">Ver producto</a>
   </div></article>`;
